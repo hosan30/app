@@ -1,30 +1,24 @@
-function cross() {
-    document.getElementById('update').setAttribute('style', 'display : none;');
-}
-
-function edit() {
-    document.getElementById('update').setAttribute('style', 'display : block;');
-}
 //////////////////** Calculation
 
 function count() {
     //Get input  Quntity
+
     let bh = document.getElementById('bhinput').value;
-    let bhinput = parseFloat(bh);
-    const bh2 = document.getElementById('price2').value;
-    const NbhAmount2 = parseFloat(bh2);
-    var bh3 = document.getElementById('price3').value;
-    const NbhAmount3 = parseFloat(bh3);
-    const bh4 = document.getElementById('price4').value;
-    const NbhAmount4 = parseFloat(bh4);
-    const bh5 = document.getElementById('price6').value;
-    const NbhAmount5 = parseFloat(bh5);
-    const bh6 = document.getElementById('price7').value;
-    const NbhAmount6 = parseFloat(bh6);
+    let bhQuantity = parseFloat(bh);
+    const bh2 = document.getElementById('leafQuantity').value;
+    const leafQuantity = parseFloat(bh2);
+    var bh3 = document.getElementById('hlQuantity').value;
+    const hlQuantity = parseFloat(bh3);
+    const bh4 = document.getElementById('rlQuantity').value;
+    const rlQuantity = parseFloat(bh4);
+    const bh5 = document.getElementById('lsQuantity').value;
+    const lsQuantity = parseFloat(bh5);
+    const bh6 = document.getElementById('blankPrice').value;
+    const blankQuantity = parseFloat(bh6);
 
     //update price
-    const inputAmount = NbhAmount6 || 0;
-    const bh7 = document.getElementById('price8').value;
+    const inputAmount = blankQuantity || 0;
+    const bh7 = document.getElementById('blankQuantity').value;
     const NbhAmount7 = parseFloat(bh7);
 
     let nbhppp = document.getElementById('ibhppp').value;
@@ -37,89 +31,18 @@ function count() {
 
     //total
     const total =
-        bhppp * bhinput +
-        glppp * NbhAmount2 +
-        hlppp * NbhAmount3 +
-        rlppp * NbhAmount4 +
-        lsppp * NbhAmount5 +
+        bhppp * bhQuantity +
+        glppp * leafQuantity +
+        hlppp * hlQuantity +
+        rlppp * rlQuantity +
+        lsppp * lsQuantity +
         inputAmount * NbhAmount7;
 
     let bhppp2 = bhppp;
-    document.getElementById('Pbhppp').innerText = bhppp2 || 283;
+    document.getElementById('bhppp').innerText = bhppp2 || 283;
     let total2 = 'Total' + ' ' + total;
     document.getElementById('OTA').innerText = total2;
-    if (bh > 0) {
-        document
-            .getElementById('success1')
-            .setAttribute(
-                'style',
-                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
-            );
-    } else {
-        document
-            .getElementById('success1')
-            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
-    }
 
-    if (bh2 > 0) {
-        // document.getElementById('success2').style.borderColor = '#2ecc71';
-        // backgroundColor = 'rgb(46, 204, 113)';
-        document
-            .getElementById('success2')
-            .setAttribute(
-                'style',
-                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
-            );
-    } else {
-        document
-            .getElementById('success2')
-            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
-    }
-    if (bh4 > 0) {
-        document
-            .getElementById('success4')
-            .setAttribute(
-                'style',
-                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
-            );
-    } else {
-        document
-            .getElementById('success4')
-            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
-    }
-    if (bh3 > 0) {
-        document
-            .getElementById('success3')
-            .setAttribute('style', 'border-color:#2ecc71; background-color:#2ecc71;');
-    } else {
-        document
-            .getElementById('success3')
-            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
-    }
-    if (bh5 > 0) {
-        document
-            .getElementById('success5')
-            .setAttribute(
-                'style',
-                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
-            );
-    } else {
-        document
-            .getElementById('success5')
-            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
-    }
-    if (bh7 > 0) {
-        document
-            .getElementById('success6')
-            .setAttribute(
-                'style',
-                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
-            );
-    } else {
-        document
-            .getElementById('success6')
-            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
-    }
     if (
         bh > 0 ||
         bh2 > 0 ||
@@ -129,51 +52,100 @@ function count() {
         bh6 > 0 ||
         bh7 > 0
     ) {
-        // document.getElementById('calaculate2').disabled = false;
-
-        document.getElementById('clear').disabled = false;
+        document.getElementById('clear').setAttribute('style', 'display:block;');
     } else {
-        document.getElementById('clear').disabled = true;
+        document.getElementById('clear').setAttribute('style', 'display:none;');
     }
-    setTimeout(() => {
-        const cleared2 = document.getElementById('cleared2');
 
-        cleared2.style.display = 'inline-flex';
-    }, 000);
-    setTimeout(() => {
-        const cleared2 = document.getElementById('cleared2');
+    bgclr(bh, 'success1');
+    bgclr(bh2, 'success2');
+    bgclr(bh3, 'success3');
+    bgclr(bh4, 'success4');
+    bgclr(bh5, 'success5');
+    bgclr(bh7, 'success6');
+    flash();
+}
+/////////////////////////End of  Function
 
-        cleared2.style.display = 'none';
-    }, 2000);
+////////////////// Increase Decrease Handler
+
+function plus() {
+    quntityupdate(true, 'bhinput');
 }
 
-function clr() {
-    setTimeout(() => {
-        const cleared = document.getElementById('cleared');
-
-        cleared.style.display = 'inline-flex';
-    }, 000);
-    setTimeout(() => {
-        const cleared = document.getElementById('cleared');
-
-        cleared.style.display = 'none';
-    }, 2000);
+function minus() {
+    quntityupdate(false, 'bhinput');
 }
 
+function plus2() {
+    quntityupdate(true, 'leafQuantity');
+}
+
+function minus2() {
+    quntityupdate(false, 'leafQuantity');
+}
+
+function plus3() {
+    quntityupdate(true, 'hlQuantity');
+}
+
+function minus3() {
+    quntityupdate(false, 'hlQuantity');
+}
+
+function plus4() {
+    quntityupdate(true, 'rlQuantity');
+}
+
+function minus4() {
+    quntityupdate(false, 'rlQuantity');
+}
+
+function plus6() {
+    quntityupdate(true, 'lsQuantity');
+}
+
+function minus6() {
+    quntityupdate(false, 'lsQuantity');
+}
+
+function plus8() {
+    quntityupdate(true, 'blankQuantity');
+}
+
+function minus8() {
+    quntityupdate(false, 'blankQuantity');
+} ///////////////////////
+
+// Increase , Deacrease Function
+function quntityupdate(isPlus, input) {
+    const caseinput = document.getElementById(input);
+    const NbhAmount = parseFloat(caseinput.value);
+    let newcount = NbhAmount;
+    if (isPlus == true) {
+        newcount = NbhAmount + 1;
+    }
+    if (isPlus == false && newcount > 0) {
+        newcount = NbhAmount - 1;
+    }
+    caseinput.value = newcount;
+    count();
+} ////////////////
+
+////////////////////clear All
 function clear3() {
     clear2();
     clr();
 }
-////////////////////clear
 
 function clear2() {
     let caseinput = document.getElementById('bhinput');
-    let caseinput2 = document.getElementById('price2');
-    let caseinput3 = document.getElementById('price3');
-    let caseinput4 = document.getElementById('price4');
-    let caseinput6 = document.getElementById('price6');
-    let caseinput7 = document.getElementById('price7');
-    let caseinput8 = document.getElementById('price8');
+    let caseinput2 = document.getElementById('leafQuantity');
+    let caseinput3 = document.getElementById('hlQuantity');
+    let caseinput4 = document.getElementById('rlQuantity');
+    let caseinput6 = document.getElementById('lsQuantity');
+    let caseinput7 = document.getElementById('blankPrice');
+    let caseinput8 = document.getElementById('blankQuantity');
 
     let newcount = caseinput.value;
 
@@ -189,153 +161,82 @@ function clear2() {
         newcount;
 
     count();
-} /////////////////////// B & H /////////////////////
-
-function plus() {
-    quntityupdate(true);
 }
 
-function minus() {
-    quntityupdate(false);
+// function clea(array) {
+//     for (let index = 0; index < array.length; index++) {
+//         const element = array[index];
+//         if (element > 0) {
+//             document.getElementById('clear').setAttribute('style', 'display:block;');
+//         } else {
+//             document.getElementById('clear').setAttribute('style', 'display:none;');
+//         }
+//     }
+// }
+// ///////////////////////
+
+/////////// clear flash card
+function clr() {
+    setTimeout(() => {
+        const cleared = document.getElementById('cleared');
+
+        cleared.style.display = 'inline-flex';
+    }, 000);
+    setTimeout(() => {
+        const cleared = document.getElementById('cleared');
+
+        cleared.style.display = 'none';
+    }, 2000);
+
+    setTimeout(() => {
+        const cleared2 = document.getElementById('cleared2');
+
+        cleared2.style.display = 'inline-flex';
+    }, 000);
+    setTimeout(() => {
+        const cleared2 = document.getElementById('cleared2');
+
+        cleared2.style.display = 'none';
+    }, 2000);
 }
 
-function quntityupdate(isPlus) {
-    const caseinput = document.getElementById('bhinput');
-    const NbhAmount = parseFloat(caseinput.value);
-    let newcount = NbhAmount;
-    if (isPlus == true) {
-        newcount = NbhAmount + 1;
+function flash() {
+    setTimeout(() => {
+        const cleared2 = document.getElementById('cleared2');
+
+        cleared2.style.display = 'inline-flex';
+    }, 000);
+    setTimeout(() => {
+        const cleared2 = document.getElementById('cleared2');
+
+        cleared2.style.display = 'none';
+    }, 2000);
+}
+//////////////////////////
+
+////// background color handler
+function bgclr(value, id) {
+    if (value > 0) {
+        document
+            .getElementById(id)
+            .setAttribute(
+                'style',
+                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
+            );
+    } else {
+        document
+            .getElementById(id)
+            .setAttribute('style', 'border-color:#f0f0f0; background-color:#white');
     }
-    if (isPlus == false && newcount > 0) {
-        newcount = NbhAmount - 1;
-    }
-    caseinput.value = newcount;
-    count();
 }
-/////////////// G L /////////////////////
+///////////////////////
 
-function plus2() {
-    quntityupdate2(true);
+//////Hide & Show Upddate
+function cross() {
+    document.getElementById('update').setAttribute('style', 'display : none;');
 }
 
-function minus2() {
-    quntityupdate2(false);
+function edit() {
+    document.getElementById('update').setAttribute('style', 'display : block;');
 }
-
-function quntityupdate2(isPlus) {
-    const caseinput = document.getElementById('price2');
-    const leafamount = parseFloat(caseinput.value);
-    let newcount = leafamount;
-    if (isPlus == true) {
-        newcount = leafamount + 1;
-
-        // caseinput.value = newbh;
-        // count()
-    }
-    if (isPlus == false && newcount > 0) {
-        newcount = leafamount - 1;
-    }
-    caseinput.value = newcount;
-    count();
-}
-
-/////////////////////// B & H /////////////////////
-
-function plus3() {
-    quntityupdate3(true);
-}
-
-function minus3() {
-    quntityupdate3(false);
-}
-
-function quntityupdate3(isPlus) {
-    const caseinput = document.getElementById('price3');
-    const NbhAmount = parseFloat(caseinput.value);
-    let newcount = NbhAmount;
-    if (isPlus == true) {
-        newcount = NbhAmount + 1;
-    }
-    if (isPlus == false && newcount > 0) {
-        newcount = NbhAmount - 1;
-    }
-    caseinput.value = newcount;
-    count();
-}
-/////////////// G L /////////////////////
-
-function plus4() {
-    quntityupdate4(true);
-}
-
-function minus4() {
-    quntityupdate4(false);
-}
-
-function quntityupdate4(isPlus) {
-    const caseinput = document.getElementById('price4');
-    const NbhAmount = parseFloat(caseinput.value);
-    let newcount = NbhAmount;
-    if (isPlus == true) {
-        newcount = NbhAmount + 1;
-
-        // caseinput.value = newbh;
-        // count()
-    }
-    if (isPlus == false && newcount > 0) {
-        newcount = NbhAmount - 1;
-    }
-    caseinput.value = newcount;
-    count();
-} /////////////////////// B & H /////////////////////
-
-function plus6() {
-    quntityupdate6(true);
-}
-
-function minus6() {
-    quntityupdate6(false);
-}
-
-function quntityupdate6(isPlus) {
-    const caseinput = document.getElementById('price6');
-    const NbhAmount = parseFloat(caseinput.value);
-    let newcount = NbhAmount;
-    if (isPlus == true) {
-        newcount = NbhAmount + 1;
-
-        // caseinput.value = newbh;
-        // count()
-    }
-    if (isPlus == false && newcount > 0) {
-        newcount = NbhAmount - 1;
-    }
-    caseinput.value = newcount;
-    count();
-}
-/////////////// G L /////////////////////
-
-function plus8() {
-    quntityupdate8(true);
-}
-
-function minus8() {
-    quntityupdate8(false);
-}
-
-function quntityupdate8(isPlus) {
-    const caseinput = document.getElementById('price8');
-    const NbhAmount = parseFloat(caseinput.value);
-    let newcount = NbhAmount;
-    if (isPlus == true) {
-        newcount = NbhAmount + 1;
-
-        // caseinput.value = newbh;
-        // count()
-    }
-    if (isPlus == false && newcount > 0) {
-        newcount = NbhAmount - 1;
-    }
-    caseinput.value = newcount;
-    count();
-}
+/////////////////////////

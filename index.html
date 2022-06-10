@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 
-    <title>MY FIRTS APP</title>
+    <title>MY FIRST APP</title>
 </head>
 
 <body>
+    <!-- Main Container -->
     <div class="container1" onclick="cross()">
         <div class="form-control2">
             <div class="">
-                <label>B & H (<span id="Pbhppp">272 </span>)</label>
+                <label>B & H (<span id="bhppp">283 </span>)</label>
             </div>
             <div>
                 <div class="test" id="success1">
@@ -31,12 +32,14 @@
             </div>
         </div>
         <div class="form-control2">
-            <div><label>G=206</label></div>
+            <div>
+                <label>Gold Leaf (<span id="leafppp">222 </span>)</label>
+            </div>
             <div class="test" id="success2">
                 <button type="button " id="add2" onclick="plus2()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="price2" value="0 " />
+                <input type="text " name=" " class=" " id="leafQuantity" value="0 " />
                 <button type="button " id=" " onclick="minus2()">
             <i class="icon-minus"></i>
           </button>
@@ -44,24 +47,24 @@
         </div>
 
         <div class="form-control2">
-            <label>h=80</label>
+            <label>Hollywood(<span id="hlppp">80 </span>)</label>
             <div class="test" id="success3">
                 <button type="button " id="add3" onclick="plus3()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="price3" value="0 " />
+                <input type="text " name=" " class=" " id="hlQuantity" value="0 " />
                 <button type="button " onclick="minus3() ">
             <i class="icon-minus"></i>
           </button>
             </div>
         </div>
         <div class="form-control2">
-            <label>R=85</label>
+            <label>Royal(<span id="rlppp">85 </span>)</label>
             <div class="test" id="success4">
                 <button type="button " id="add4 " onclick="plus4()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="price4" value="0 " />
+                <input type="text " name=" " class=" " id="rlQuantity" value="0 " />
                 <button type="button " onclick="minus4() ">
             <i class="icon-minus"></i>
           </button>
@@ -69,28 +72,29 @@
         </div>
 
         <div class="form-control2 fullwidth">
-            <label>L=170</label>
+            <label>Lucky Strike (<span id="Pbhppp">170 </span>)</label>
             <div class="test" id="success5">
                 <button type="button " onclick="plus6()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="price6" value="0 " />
+                <input type="text " name=" " class=" " id="lsQuantity" value="0 " />
                 <button type="button " onclick="minus6()">
             <i class="icon-minus"></i>
           </button>
             </div>
         </div>
         <div class="form-control2 fullwidth">
-            <label>Price </label>
+            <label>Price Per Packet & Quantity</label>
+
             <div class="others">
-                <input type="text " name=" " class="others" id="price7" value="0 " />
+                <input type="text " name=" " class="others" id="blankPrice" value="0 " />
 
                 <div class="test" id="success6">
                     <button type="button " id="add6" onclick="plus8() ">
               <i class="icon-plus"></i>
             </button>
 
-                    <input type="text " name=" " class=" " id="price8" value="0 " />
+                    <input type="text " name=" " class=" " id="blankQuantity" value="0 " />
                     <button type="button " onclick="minus8() ">
               <i class="icon-minus"></i>
             </button>
@@ -98,6 +102,9 @@
             </div>
         </div>
     </div>
+    <!-- End of main Container -->
+
+    <!-- Total Span -->
     <div class="middle d-flex justify-content-center">
         <div class="total">
             <button onclick="count()" id="calaculate2 " class="cal">
@@ -106,14 +113,14 @@
             <b><p><span id="OTA" class=" "></span></p
         ></b>
 
-            <button onclick="clear3()" id="clear" class="clear" disabled="true">
-          clear All
-        </button>
+            <button onclick="clear3()" id="clear" class="clear">clear All</button>
         </div>
     </div>
     <div class="edit">
         <button onclick="edit()" class="edit"><i class="icon-edit"></i></button>
     </div>
+
+    <!-- Flash Card -->
     <div class="flash">
         <div class="cleared fade-out fade-in" id="cleared">
             <p>Cleared</p>
@@ -124,6 +131,8 @@
             <i class="icon-remove"></i>
         </div>
     </div>
+
+    <!-- Update price -->
     <div class="update" id="update">
         <button id="cross" class="cross" onclick="cross()">
         <i class="icon-remove"></i>

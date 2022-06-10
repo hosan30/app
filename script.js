@@ -43,8 +43,8 @@ function count() {
         rlppp * NbhAmount4 +
         lsppp * NbhAmount5 +
         inputAmount * NbhAmount7;
-
-    document.getElementById('OTA').innerText = total;
+    let total2 = 'Total' + ' ' + total;
+    document.getElementById('OTA').innerText = total2;
     if (bh > 0) {
         document
             .getElementById('success1')

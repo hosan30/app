@@ -14,7 +14,7 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 input {
@@ -102,7 +102,7 @@ button {
 
 .clear {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     left: 40%;
 }
 
@@ -273,7 +273,7 @@ label {
 
 .bg-text {
     position: fixed;
-    top: 1px;
+    bottom: 1px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;

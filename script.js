@@ -29,7 +29,7 @@ function count() {
 
     let nbhppp = document.getElementById('ibhppp').value;
     let Obhppp = parseFloat(nbhppp);
-    let bhppp = Obhppp || 272;
+    let bhppp = Obhppp || 283;
     let glppp = 206;
     let rlppp = 85;
     let hlppp = 80;
@@ -45,7 +45,7 @@ function count() {
         inputAmount * NbhAmount7;
 
     let bhppp2 = bhppp;
-    document.getElementById('Pbhppp').innerText = bhppp2 || 272;
+    document.getElementById('Pbhppp').innerText = bhppp2 || 283;
     let total2 = 'Total' + ' ' + total;
     document.getElementById('OTA').innerText = total2;
     if (bh > 0) {

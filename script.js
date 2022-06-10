@@ -34,7 +34,7 @@ function count() {
     let rlppp = 85;
     let hlppp = 80;
     let lsppp = 170;
-
+    // document.getElementById('nbhppp').innerText = bhppp;
     //total
     const total =
         bhppp * bhinput +

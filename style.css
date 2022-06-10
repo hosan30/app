@@ -99,6 +99,10 @@ button {
     overflow: hidden;
 }
 
+.calaculate2 {
+    display: none;
+}
+
 .test {
     width: 120px;
     background-color: white;

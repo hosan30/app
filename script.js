@@ -34,7 +34,7 @@ function count() {
     let rlppp = 85;
     let hlppp = 80;
     let lsppp = 170;
-    // document.getElementById('nbhppp').innerText = bhppp;
+
     //total
     const total =
         bhppp * bhinput +
@@ -43,6 +43,9 @@ function count() {
         rlppp * NbhAmount4 +
         lsppp * NbhAmount5 +
         inputAmount * NbhAmount7;
+
+    let bhppp2 = bhppp;
+    document.getElementById('Pbhppp').innerText = bhppp2 || 272;
     let total2 = 'Total' + ' ' + total;
     document.getElementById('OTA').innerText = total2;
     if (bh > 0) {

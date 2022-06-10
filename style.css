@@ -1,0 +1,277 @@
+* {}
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+    background: #f4d03f !important;
+}
+
+p {
+    display: inline-block;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto !important;
+}
+
+input {
+    text-align: center;
+    width: 40px !important;
+    border: none !important;
+    background-color: transparent;
+}
+
+#cross {
+    position: fixed;
+    right: 1px;
+}
+
+.cen {
+    margin: auto;
+    display: block;
+}
+
+.others input:nth-child(1) {
+    width: 100px !important;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.total button {
+    color: white;
+    background-color: blue !important;
+    padding: 3px 20px;
+    margin: 0px 10px;
+    border-radius: 4px;
+}
+
+.total button:disabled {
+    background-color: #dddddd !important;
+    color: rgb(65, 62, 62);
+    cursor: not-allowed;
+    display: none;
+}
+
+button {
+    border: none !important;
+    background-color: transparent !important;
+    padding-left: 10px;
+    padding: righ 10px;
+    /* color: black; */
+    font-weight: 500;
+}
+
+.form-control2 {
+    background-color: transparent !important;
+    width: 50% !important;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    float: left;
+    position: fixed;
+    top: 1px;
+    right: 1px;
+    background-color: aqua;
+    z-index: 10;
+    height: 100vh;
+    width: 30%;
+    display: none;
+}
+
+.update input {
+    width: 100px !important;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+    overflow: hidden;
+}
+
+.test {
+    width: 120px;
+    background-color: white;
+    border-radius: 4px;
+    border: 2px solid #f0f0f0;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.75);
+}
+
+.form-control2 .success {
+    border: 2px solid #2ecc71 !important;
+}
+
+.others div {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.middle {
+    width: 100%;
+}
+
+.flash {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.cleared2 {
+    width: 150px;
+    background-color: forestgreen;
+    display: flex;
+    gap: 30px;
+    color: white;
+    height: 27px !important;
+    font-weight: 400;
+    border-radius: 5px;
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+.cleared {
+    width: 170px;
+    background-color: rgb(16, 255, 235);
+    display: flex;
+    gap: 30px;
+    color: white;
+    height: 27px !important;
+    font-weight: 400;
+    border-radius: 5px;
+    display: flex;
+    position: fixed;
+    bottom: 80px;
+    left: 30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+.fade-out {
+    animation: fade-out 3s ease 2s;
+}
+
+.fade-in {
+    animation: fade-in 3s ease;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.icon-remove:before {
+    content: '\f00d';
+    cursor: pointer;
+}
+
+.form-control :nth-child(2) {}
+
+label {
+    font-size: 1rem;
+    display: block;
+}
+
+.total {
+    text-align: center;
+}
+
+
+/*******************************Nothing */
+
+.words {
+    color: #f4d03f;
+    font-size: 0;
+    line-height: 1.5;
+}
+
+.words span {
+    font-size: 3rem;
+    display: inline-block;
+    animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-30%, 0);
+    }
+    50% {
+        text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+    }
+    100% {
+        transform: translate(30%, 0);
+    }
+}
+
+.bg-text p {
+    text-align: center;
+}
+
+.bg-text {
+    position: fixed;
+    top: 1px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px !important;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    cursor: default;
+}
+
+.words {
+    display: flex;
+    flex-direction: row;
+}
+
+.words span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.words span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.words span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.words span:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.words span:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+.words span:nth-child(7) {
+    animation-delay: 3s;
+}

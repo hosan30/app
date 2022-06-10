@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+
+    <title>MY FIRTS APP</title>
+</head>
+
+<body>
+    <div class="container1" onclick="cross()">
+        <div class="form-control2">
+            <div class="">
+                <label>B & H (PPP = 272)</label>
+            </div>
+            <div>
+                <div class="test" id="success1">
+                    <button type="button " id="add " onclick="plus()">
+              <i class="icon-plus"></i>
+            </button>
+                    <input type="text " name=" " class=" " id="bhinput" value="0 " />
+                    <button type="button " id="remove " onclick="minus() ">
+              <i class="icon-minus"></i>
+            </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-control2">
+            <div><label>G=206</label></div>
+            <div class="test" id="success2">
+                <button type="button " id="add2" onclick="plus2()">
+            <i class="icon-plus"></i>
+          </button>
+                <input type="text " name=" " class=" " id="price2" value="0 " />
+                <button type="button " id=" " onclick="minus2()">
+            <i class="icon-minus"></i>
+          </button>
+            </div>
+        </div>
+
+        <div class="form-control2">
+            <label>h=80</label>
+            <div class="test" id="success3">
+                <button type="button " id="add3" onclick="plus3()">
+            <i class="icon-plus"></i>
+          </button>
+                <input type="text " name=" " class=" " id="price3" value="0 " />
+                <button type="button " onclick="minus3() ">
+            <i class="icon-minus"></i>
+          </button>
+            </div>
+        </div>
+        <div class="form-control2">
+            <label>R=85</label>
+            <div class="test" id="success4">
+                <button type="button " id="add4 " onclick="plus4()">
+            <i class="icon-plus"></i>
+          </button>
+                <input type="text " name=" " class=" " id="price4" value="0 " />
+                <button type="button " onclick="minus4() ">
+            <i class="icon-minus"></i>
+          </button>
+            </div>
+        </div>
+        <div class="middle d-flex justify-content-center">
+            <div class="total">
+                <button onclick="count()" id="calaculate2 ">Calculate</button>
+                <p>total <span id="OTA" class=" ">00</span></p>
+
+                <button onclick="clear3()" id="clear" disabled="true">
+            clear All
+          </button>
+            </div>
+        </div>
+
+        <!-- <div class="form-control2">
+            <label>R=100</label>
+            <div class="test" id="success5">
+                <button type="button " onclick="plus6()">
+            <i class="icon-plus"></i>
+          </button>
+                <input type="text " name=" " class=" " id="price6" value="0 " />
+                <button type="button " onclick="minus6()">
+            <i class="icon-minus"></i>
+          </button>
+            </div> -->
+    </div>
+    <div class="form-control2">
+        <label>others</label>
+        <div class="others">
+            <input type="text " name=" " class="others" id="price7" value="0 " />
+
+            <div class="test" id="success6">
+                <button type="button " id="add6" onclick="plus8() ">
+              <i class="icon-plus"></i>
+            </button>
+
+                <input type="text " name=" " class=" " id="price8" value="0 " />
+                <button type="button " onclick="minus8() ">
+              <i class="icon-minus"></i>
+            </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="edit">
+        <button onclick="edit()"><i class="far fa-copy"></i></button>
+    </div>
+    <div class="flash">
+        <div class="cleared fade-out fade-in" id="cleared">
+            <p>Cleared</p>
+            <i class="icon-remove"></i>
+        </div>
+        <div class="cleared2 fade-out fade-in" id="cleared2">
+            <p>Total Updated</p>
+            <i class="icon-remove"></i>
+        </div>
+    </div>
+    <div class="update" id="update">
+        <button id="cross" onclick="cross()">
+        <i class="icon-remove"></i>
+      </button>
+        <p>Update Price</p>
+        <br />
+        <p>B&H</p>
+
+        <input type="text " name="" class="ce" id="ibhppp" value="0 " /><br />
+        <button onclick="count()">Update</button>
+    </div>
+
+    <script src="script.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+</html>

@@ -24,11 +24,6 @@ input {
     background-color: transparent;
 }
 
-#cross {
-    position: fixed;
-    right: 1px;
-}
-
 .cen {
     margin: auto;
     display: block;
@@ -93,9 +88,10 @@ button {
     height: 100vh;
     width: 30%;
     display: none;
+    padding-top: 50px;
 }
 
-. .update input {
+.update input {
     width: 100px !important;
     background-color: white;
     border-radius: 4px;
@@ -140,7 +136,18 @@ button {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    color: azure;
+    color: white;
+}
+
+.cross button {
+    position: fixed !important;
+    left: 1px !important;
+    top: 20px;
+    font-size: 25px;
+    border: 0px solid black !important;
+    background-color: #000000 !important;
+    border-radius: 5px !important;
+    color: white;
 }
 
 .cleared2 {

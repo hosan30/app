@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 
     <title>MY FIRTS APP</title>
@@ -68,19 +67,9 @@
           </button>
             </div>
         </div>
-        <div class="middle d-flex justify-content-center">
-            <div class="total">
-                <button onclick="count()" id="calaculate2 ">Calculate</button>
-                <p>total <span id="OTA" class=" ">00</span></p>
 
-                <button onclick="clear3()" id="clear" disabled="true">
-            clear All
-          </button>
-            </div>
-        </div>
-
-        <!-- <div class="form-control2">
-            <label>R=100</label>
+        <div class="form-control2 fullwidth">
+            <label>L=170</label>
             <div class="test" id="success5">
                 <button type="button " onclick="plus6()">
             <i class="icon-plus"></i>
@@ -89,28 +78,36 @@
                 <button type="button " onclick="minus6()">
             <i class="icon-minus"></i>
           </button>
-            </div> -->
-    </div>
-    <div class="form-control2">
-        <label>others</label>
-        <div class="others">
-            <input type="text " name=" " class="others" id="price7" value="0 " />
+            </div>
+        </div>
+        <div class="form-control2 fullwidth">
+            <label>others </label>
+            <div class="others">
+                <input type="text " name=" " class="others" id="price7" value="0 " />
 
-            <div class="test" id="success6">
-                <button type="button " id="add6" onclick="plus8() ">
-            <i class="icon-plus"></i>
-          </button>
+                <div class="test" id="success6">
+                    <button type="button " id="add6" onclick="plus8() ">
+              <i class="icon-plus"></i>
+            </button>
 
-                <input type="text " name=" " class=" " id="price8" value="0 " />
-                <button type="button " onclick="minus8() ">
-            <i class="icon-minus"></i>
-          </button>
+                    <input type="text " name=" " class=" " id="price8" value="0 " />
+                    <button type="button " onclick="minus8() ">
+              <i class="icon-minus"></i>
+            </button>
+                </div>
             </div>
         </div>
     </div>
+    <div class="middle d-flex justify-content-center">
+        <div class="total">
+            <button onclick="count()" id="calaculate2 ">Calculate</button>
+            <p>total <span id="OTA" class=" ">00</span></p>
 
+            <button onclick="clear3()" id="clear" disabled="true">clear All</button>
+        </div>
+    </div>
     <div class="edit">
-        <button onclick="edit()"><i class="far fa-copy"></i></button>
+        <button onclick="edit()" class="edit"><i class="icon-edit"></i></button>
     </div>
     <div class="flash">
         <div class="cleared fade-out fade-in" id="cleared">

@@ -33,6 +33,7 @@ function count() {
     let glppp = 206;
     let rlppp = 85;
     let hlppp = 80;
+    let lsppp = 170;
 
     //total
     const total =
@@ -40,7 +41,7 @@ function count() {
         glppp * NbhAmount2 +
         hlppp * NbhAmount3 +
         rlppp * NbhAmount4 +
-        100 * NbhAmount5 +
+        lsppp * NbhAmount5 +
         inputAmount * NbhAmount7;
 
     document.getElementById('OTA').innerText = total;

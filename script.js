@@ -21,18 +21,28 @@ function count() {
     const bh7 = document.getElementById('blankQuantity').value;
     const NbhAmount7 = parseFloat(bh7);
 
-    let nbhppp = document.getElementById('ibhppp').value;
-    let Obhppp = parseFloat(nbhppp);
-    let bhppp = Obhppp || 283;
-    let glppp = 222;
-    let rlppp = 85;
-    let hlppp = 80;
-    let lsppp = 170;
+    let obhppp = document.getElementById('nbhppp').value;
+    let nbhppp = parseFloat(obhppp);
+    let bhppp = nbhppp || 283;
+    let oleafppp = document.getElementById('nleafppp').value;
+    let nleafppp = parseFloat(oleafppp);
+    let leafppp = nleafppp || 222;
+    let ohlppp = document.getElementById('nhlppp').value;
+    let nhlppp = parseFloat(ohlppp);
+    let hlppp = nhlppp || 80;
+
+    let orlppp = document.getElementById('nrlppp').value;
+    let nrlppp = parseFloat(orlppp);
+    let rlppp = nrlppp || 85;
+
+    let olsppp = document.getElementById('nlsppp').value;
+    let nlsppp = parseFloat(olsppp);
+    let lsppp = nlsppp || 170;
 
     //total
     const total =
         bhppp * bhQuantity +
-        glppp * leafQuantity +
+        leafppp * leafQuantity +
         hlppp * hlQuantity +
         rlppp * rlQuantity +
         lsppp * lsQuantity +
@@ -40,7 +50,19 @@ function count() {
 
     let bhppp2 = bhppp;
     document.getElementById('bhppp').innerText = bhppp2 || 283;
+    let leafppp2 = leafppp;
+    document.getElementById('leafppp').innerText = leafppp2 || 222;
+    let hlppp2 = hlppp;
+    document.getElementById('hlppp').innerText = hlppp2 || 80;
+
+    let rlppp2 = rlppp;
+    document.getElementById('rlppp').innerText = rlppp2 || 85;
+
+    let lsppp2 = lsppp;
+    document.getElementById('lsppp').innerText = lsppp2 || 170;
+
     let total2 = 'Total' + ' ' + total;
+
     document.getElementById('OTA').innerText = total2;
 
     if (
@@ -163,6 +185,10 @@ function clear2() {
     count();
 }
 
+function update() {
+    count();
+    cross();
+}
 // function clea(array) {
 //     for (let index = 0; index < array.length; index++) {
 //         const element = array[index];

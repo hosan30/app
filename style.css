@@ -22,6 +22,7 @@ input {
     width: 40px !important;
     border: none !important;
     background-color: transparent;
+    outline: none;
 }
 
 .cen {
@@ -245,6 +246,7 @@ label {
     color: #f4d03f;
     font-size: 0;
     line-height: 1.5;
+    justify-content: center;
 }
 
 .words span {
@@ -265,8 +267,8 @@ label {
     }
 }
 
-.bg-text p {
-    text-align: center;
+.bg-text span {
+    text-align: center I !important;
 }
 
 .bg-text {

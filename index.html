@@ -17,30 +17,29 @@
     <div class="container1" onclick="cross()">
         <div class="form-control2">
             <div class="">
-                <label class="mb-4" id="update" data-mdb-toggle="animation" data-mdb-animation-start="onLoad" data-mdb-animation="slide-in-left" data-mdb-animation-duration="1000" data-mdb-animation-delay="300">B & H (<span id="bhppp">283 </span>)</label
-          >
-        </div>
-        <div>
-          <div class="test" id="success1">
-            <button type="button " id="add " onclick="plus()">
+                <label>B & H (<span id="bhppp">283 </span>)</label>
+            </div>
+            <div>
+                <div class="test" id="success1">
+                    <button type="button " id="add " onclick="plus()">
               <i class="icon-plus"></i>
             </button>
-            <input type="text " name=" " class=" " id="bhinput" value="0 " />
-            <button type="button " id="remove " onclick="minus() ">
+                    <input type="text " name=" " class=" " id="bhinput" value="0 " disabled="true" />
+                    <button type="button " id="remove " onclick="minus() ">
               <i class="icon-minus"></i>
             </button>
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="form-control2">
-        <div>
-          <label>Gold Leaf (<span id="leafppp">222 </span>)</label>
+        <div class="form-control2">
+            <div>
+                <label>Gold Leaf (<span id="leafppp">222 </span>)</label>
             </div>
             <div class="test" id="success2">
                 <button type="button " id="add2" onclick="plus2()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="leafQuantity" value="0 " />
+                <input type="text " name=" " class=" " disabled="true" id="leafQuantity" value="0 " />
                 <button type="button " id=" " onclick="minus2()">
             <i class="icon-minus"></i>
           </button>
@@ -53,7 +52,7 @@
                 <button type="button " id="add3" onclick="plus3()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="hlQuantity" value="0 " />
+                <input type="text " name=" " class=" " disabled="true" id="hlQuantity" value="0 " />
                 <button type="button " onclick="minus3() ">
             <i class="icon-minus"></i>
           </button>
@@ -65,7 +64,7 @@
                 <button type="button " id="add4 " onclick="plus4()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="rlQuantity" value="0 " />
+                <input type="text " name=" " class=" " disabled="true" id="rlQuantity" value="0 " />
                 <button type="button " onclick="minus4() ">
             <i class="icon-minus"></i>
           </button>
@@ -78,7 +77,7 @@
                 <button type="button " onclick="plus6()">
             <i class="icon-plus"></i>
           </button>
-                <input type="text " name=" " class=" " id="lsQuantity" value="0 " />
+                <input type="text " name=" " class=" " disabled="true" id="lsQuantity" value="0 " />
                 <button type="button " onclick="minus6()">
             <i class="icon-minus"></i>
           </button>
@@ -87,7 +86,7 @@
         <div class="form-control2 fullwidth">
             <label>Price Per Packet & Quantity</label>
 
-            <div class="others">
+            <div class="blank">
                 <input type="text " name=" " class="others" id="blankPrice" value="0 " />
 
                 <div class="test" id="success6">
@@ -95,7 +94,7 @@
               <i class="icon-plus"></i>
             </button>
 
-                    <input type="text " name=" " class=" " id="blankQuantity" value="0 " />
+                    <input type="text " name=" " class=" " disabled="true" id="blankQuantity" value="0 " />
                     <button type="button " onclick="minus8() ">
               <i class="icon-minus"></i>
             </button>
@@ -114,7 +113,9 @@
             <b><p><span id="OTA" class=" "></span></p
         ></b>
 
-            <button onclick="clear3()" id="clear" class="clear">clear All</button>
+            <button onclick="clear3()" id="clear" class="clear-input">
+          clear All
+        </button>
         </div>
     </div>
     <div class="edit">
@@ -134,23 +135,26 @@
     </div>
 
     <!-- Update price -->
-    <div class="update">
-        <button id="cross" class="cross" onclick="cross()">
-        <i class="icon-remove"></i>
-      </button>
-        <p>Update Price</p>
-        <br />
-        <p>B&H</p>
-        <input type="text " name="" class="ce" id="nbhppp" value="283" /><br />
-        <p>Leaf</p>
-        <input type="text " name="" class="ce" id="nleafppp" value="222" /><br />
-        <p>Hollywood</p>
-        <input type="text " name="" class="ce" id="nhlppp" value="80" /><br />
-        <p>Royal</p>
-        <input type="text " name="" class="ce" id="nrlppp" value="85" /><br />
-        <p>Lucky Strike</p>
-        <input type="text " name="" class="ce" id="nlsppp" value="170" /><br />
-        <button onclick="update()">Update</button>
+    <div class="side-bar" id="side-bar">
+        <div class="update" id="update">
+            <!-- <button id="cross" class="cross" onclick="cross()"> -->
+            <!-- <i class="icon-remove"></i>
+            </button> -->
+            <p>Update Price</p>
+            <br />
+            <p>B&H</p>
+            <input type="text " name="" class="ce" id="nbhppp" value="283" /><br />
+            <p>Leaf</p>
+            <input type="text " name="" class="ce" id="nleafppp" value="222" /><br />
+            <p>Hollywood</p>
+            <input type="text " name="" class="ce" id="nhlppp" value="80" /><br />
+            <p>Royal</p>
+            <input type="text " name="" class="ce" id="nrlppp" value="85" /><br />
+            <p>Lucky Strike</p>
+            <input type="text " name="" class="ce" id="nlsppp" value="170" /><br />
+            <button onclick="update()">Update</button>
+            <span class="cross" onclick="cross()">&times;</span>
+        </div>
     </div>
     <div class="bg-text">
         <div class="words word-1">

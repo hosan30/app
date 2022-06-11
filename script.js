@@ -259,10 +259,10 @@ function bgclr(value, id) {
 
 //////Hide & Show Upddate
 function cross() {
-    document.getElementById('update').setAttribute('style', 'display : none;');
+    document.getElementById('side-bar').setAttribute('style', 'width : 00px;');
 }
 
 function edit() {
-    document.getElementById('update').setAttribute('style', 'display : block;');
+    document.getElementById('side-bar').setAttribute('style', 'width : 300px;');
 }
 /////////////////////////

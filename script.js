@@ -266,7 +266,5 @@ function edit() {
     document.getElementById('side-bar').setAttribute('style', 'width : 300px;');
 }
 
-function setting() {
-    alert('Not Setup Yet:)');
-}
+function setting() {}
 /////////////////////////

@@ -316,8 +316,8 @@ function edit() {
 }
 
 function setting() {
-    function setting() {
-        alert('COMING SOON');
-    }
+    alert('COMING SOON');
+    location.href = 'index.html';
 }
+
 /////////////////////////

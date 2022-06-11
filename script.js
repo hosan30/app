@@ -269,4 +269,10 @@ function edit() {
 function setting() {
     alert('COMING SOON');
 }
+
+function setting() {
+    alert('COMING SOON');
+    location.href = 'beta.html';
+}
+
 /////////////////////////

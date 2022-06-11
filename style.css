@@ -4,7 +4,7 @@ body {
     font-family: 'Archivo Black', sans-serif;
     background: f4d03f !important;
     font-size: 15px !important;
-    background: url(bg-texture.png);
+    background: url(https://i.ibb.co/ypf4wtQ/bg-texture.png);
     background-color: #f4d03f !important;
     /* background-color: #1f1f3f !important; */
 }
@@ -23,9 +23,15 @@ input {
 }
 
 label {
-    font-size: 15px;
+    font-size: 14px;
     display: block;
     /* color: white; */
+}
+
+.news {
+    position: fixed;
+    top: 20px;
+    left: 20px;
 }
 
 .container1 {

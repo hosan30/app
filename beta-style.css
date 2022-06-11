@@ -5,18 +5,17 @@ body {
     background: f4d03f !important;
     font-size: 15px !important;
     background: url(bg-texture.png);
-    background-color: #f4d03f !important;
-    /* background-color: #1f1f3f !important; */
+    /* background-color: #f4d03f !important; */
+    background-color: #1f1f3f !important;
 }
 
 p {
     display: inline-block;
-    /* color: white; */
+    color: white;
 }
 
 a {
-    display: inline;
-    !important;
+    display: inline !important;
 }
 
 input {
@@ -30,7 +29,7 @@ input {
 label {
     font-size: 15px;
     display: block;
-    /* color: white; */
+    color: white;
 }
 
 .container1 {
@@ -50,8 +49,8 @@ label {
 }
 
 .total button {
-    color: white;
-    background-color: blue !important;
+    color: #1f1f3f;
+    background-color: #f4d03f !important;
     padding: 3px 20px;
     margin: 0px 10px;
     border-radius: 4px;
@@ -315,7 +314,7 @@ button {
 /*******************************Nothing */
 
 .words {
-    color: #f4d03f;
+    color: #1d1d7e70;
     font-size: 0;
     line-height: 1.5;
     justify-content: center;

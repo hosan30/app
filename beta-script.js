@@ -296,7 +296,7 @@ function bgclr(value, id) {
             .getElementById(id)
             .setAttribute(
                 'style',
-                'border-color:#2ecc71; background-color:#2ecc71; color:white;'
+                'border-color:#f4d03f; background-color:#f4d03f; color:white;'
             );
     } else {
         document
@@ -315,5 +315,9 @@ function edit() {
     document.getElementById('side-bar').setAttribute('style', 'width : 300px;');
 }
 
-function setting() {}
+function setting() {
+    function setting() {
+        alert('COMING SOON');
+    }
+}
 /////////////////////////

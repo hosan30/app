@@ -12,7 +12,7 @@ body {
 .news {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
 }
 
 p {
@@ -22,6 +22,7 @@ p {
 
 a {
     display: inline !important;
+    color: white;
 }
 
 input {

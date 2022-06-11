@@ -27,7 +27,7 @@ label {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .total button {
@@ -177,14 +177,13 @@ button {
     color: white;
 }
 
-.cleared2 {
-    width: 170px;
-    background-color: forestgreen;
+.update-flash {
+    width: 120px;
+    background-color: #2ecc71;
     display: flex;
-    gap: 30px;
+    gap: 5px;
     color: white;
     height: 30px !important;
-    font-weight: 400;
     border-radius: 5px;
     display: flex;
     position: fixed;
@@ -195,22 +194,38 @@ button {
     padding: 3px 10px;
 }
 
+.update-flash p {
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    font-weight: 300px;
+}
+
 .cleared {
-    width: 170px;
-    background-color: rgb(16, 255, 235);
+    width: 120px;
+    background-color: #d11919;
     display: flex;
-    gap: 30px;
+    gap: 5px;
     color: white;
     height: 30px !important;
-    font-weight: 400;
     border-radius: 5px;
     display: flex;
     position: fixed;
-    bottom: 80px;
+    bottom: 30px;
     left: 30px;
-    padding: 3px 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
     display: none;
+    padding: 3px 10px;
+    z-index: 2;
+}
+
+#ok {
+    height: 100%;
+    color: rgb(76, 0, 255);
+    padding: 5px 5px;
+    overflow: hidden;
+    border-radius: 5px;
+    size: 30px;
 }
 
 .fade-out {

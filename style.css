@@ -2,8 +2,9 @@
 
 body {
     font-family: 'Archivo Black', sans-serif;
-    background: #f4d03f !important;
+    background: f4d03f !important;
     font-size: 15px !important;
+    background: url(/bg-texture.png);
 }
 
 p {
@@ -28,6 +29,15 @@ label {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 80px;
+}
+
+@media max-768px {
+    .container1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
 }
 
 .total button {
@@ -167,27 +177,48 @@ button {
 }
 
 .edit button {
-    font-size: 35px;
-    border: 0px solid black !important;
-    background-color: #2ecc71 !important;
-    border-radius: 50px !important;
+    font-size: 25px;
+    border: px solid black !important;
+    background-color: hsl(239, 85%, 46%) !important;
+    border-radius: 18px 6px 0px 6px;
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 0px;
+    bottom: 0px;
+    font-weight: 300px;
     color: white;
 }
 
+.setting button {
+    font-size: 25px;
+    border: 0px solid black !important;
+    background-color: #82c7cc !important;
+    border-radius: 6px 18px 6px 0px;
+    position: fixed;
+    left: 0px !important;
+    bottom: 0px;
+    color: white;
+}
+
+.update button {
+    color: white;
+    text-align: center;
+    margin: 18px 64px !important;
+    border: 1px solid #999 !important;
+    font-weight: 400;
+    width: 100px;
+}
+
 .update-flash {
-    width: 120px;
+    width: 100px;
     background-color: #2ecc71;
     display: flex;
     gap: 5px;
     color: white;
     height: 30px !important;
-    border-radius: 5px;
+    border-radius: 4px;
     display: flex;
     position: fixed;
-    bottom: 30px;
+    top: 30px;
     left: 30px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
     display: none;
@@ -202,7 +233,7 @@ button {
 }
 
 .cleared {
-    width: 120px;
+    width: 100px;
     background-color: #d11919;
     display: flex;
     gap: 5px;
@@ -211,7 +242,7 @@ button {
     border-radius: 5px;
     display: flex;
     position: fixed;
-    bottom: 30px;
+    top: 30px;
     left: 30px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
     display: none;
@@ -219,10 +250,10 @@ button {
     z-index: 2;
 }
 
-#ok {
+.ok {
     height: 100%;
-    color: rgb(76, 0, 255);
-    padding: 5px 5px;
+    color: rgb(0, 0, 0);
+    padding: 5px 0px;
     overflow: hidden;
     border-radius: 5px;
     size: 30px;

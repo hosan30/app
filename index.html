@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/c33dfe6377.js" crossorigin="anonymous"></script>
 
     <title>MY FIRST APP</title>
 </head>
@@ -119,18 +120,25 @@
         </div>
     </div>
     <div class="edit">
-        <button onclick="edit()" class="edit"><i class="icon-edit"></i></button>
+        <button onclick="edit()" class="edit">
+        <i class="fa-regular fa-pen-to-square"></i>
+      </button>
+    </div>
+    <div class="setting">
+        <button onclick="setting()" class="setting">
+        <i class="fa-solid fa-gear"></i>
+      </button>
     </div>
 
     <!-- Flash Card -->
     <div class="flash">
         <div class="cleared fade-out fade-in" id="cleared">
             <p>Cleared</p>
-            <i class="icon-ok-circle" id="ok"></i>
+            <i class="fa-regular fa-circle-check ok"></i>
         </div>
         <div class="update-flash fade-out fade-in" id="cleared2">
             <p>Updated</p>
-            <i class="icon-ok-circle" id="ok"></i>
+            <i class="fa-regular fa-circle-check ok"></i>
         </div>
     </div>
 

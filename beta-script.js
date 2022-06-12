@@ -1,43 +1,58 @@
 ///////////test script
-count();
+
 view();
 
-function hemlo() {
-    let bhValue = document.getElementById('nbhppp').value;
+// function savedata(data) {
+//     fetch('https://jsonplaceholder.typicode.com/posts', {
+//             method: 'POST',
+//             body: JSON.stringify(data),
+//             headers: {
+//                 'Content-type': 'application/json; charset=UTF-8',
+//             },
+//         })
+//         .then((response) => response.json())
+//         .then((json) => console.log(data));
+// }
+// var newData = ' ' + document.getElementById('nbhppp').value;
+// if (localStorage.getItem('bh') == null) {
+//     localStorage.setItem('bh', '[]');
+// }
+// var oldData = JSON.parse(localStorage.getItem('bh'));
+// oldData.push(newData);
+// localStorage.setItem('bh', JSON.stringify(oldData));
+
+function saveLocal(itemName, newPrice) {
+    let bhValue = document.getElementById(newPrice).value;
     let nbhValue = parseFloat(bhValue);
-    // let leafValue = document.getElementById('nleafppp').value;
-    // const dataInfo = { BH: nbhValue, LEAF: leafValue };
-    // // savedata(dataInfo);
 
-    let local = localStorage.setItem('bh', nbhValue);
-    let BhLocal = localStorage.getItem('bh');
-    // let bhppp2 = bhppp;
-    // document.getElementById('bhppp').innerText = BhLocal || 0;
-    // document.querySelector('.bhppp').innerText = BhLocal;
-
-    function savedata(data) {
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
-            .then((response) => response.json())
-            .then((json) => console.log(data));
-    }
-    // var newData = ' ' + document.getElementById('nbhppp').value;
-    // if (localStorage.getItem('bh') == null) {
-    //     localStorage.setItem('bh', '[]');
-    // }
-    // var oldData = JSON.parse(localStorage.getItem('bh'));
-    // oldData.push(newData);
-    // localStorage.setItem('bh', JSON.stringify(oldData));
+    let local = localStorage.setItem(itemName, nbhValue);
+    let BhLocal = localStorage.getItem(itemName);
 }
+
+function update() {
+    cross();
+    saveLocal('leaf', 'nleafppp');
+    saveLocal('bh', 'nbhppp');
+
+    view();
+    count();
+    // saveLocal('bh');
+}
+
+// function saveLocal() {
+//     let bhValue = document.getElementById('nbhppp').value;
+//     let nbhValue = parseFloat(bhValue);
+
+//     let local = localStorage.setItem('bh', nbhValue);
+//     let BhLocal = localStorage.getItem('bh');
+// }
 
 function view() {
     if (localStorage.getItem('bh') != null) {
         document.getElementById('bhppp').innerHTML = localStorage.getItem('bh');
+    }
+    if (localStorage.getItem('leaf') != null) {
+        document.getElementById('leafppp').innerHTML = localStorage.getItem('leaf');
     }
 }
 
@@ -232,12 +247,6 @@ function clear2() {
     count();
 }
 
-function update() {
-    cross();
-    hemlo();
-    view();
-    count();
-}
 // function clea(array) {
 //     for (let index = 0; index < array.length; index++) {
 //         const element = array[index];

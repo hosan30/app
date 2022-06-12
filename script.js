@@ -140,6 +140,7 @@ function minus8() {
 } ///////////////////////
 
 // Increase , Deacrease Function
+
 function quntityupdate(isPlus, input) {
     const caseinput = document.getElementById(input);
     const NbhAmount = parseFloat(caseinput.value);

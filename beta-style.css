@@ -192,7 +192,7 @@ button {
 }
 
 .edit button {
-    font-size: 25px;
+    font-size: 35px;
     border: px solid black !important;
     background-color: hsl(239, 85%, 46%) !important;
     border-radius: 18px 6px 0px 6px;
@@ -204,7 +204,7 @@ button {
 }
 
 .setting button {
-    font-size: 25px;
+    font-size: 35px;
     border: 0px solid black !important;
     background-color: #82c7cc !important;
     border-radius: 6px 18px 6px 0px;
@@ -321,7 +321,7 @@ button {
 /*******************************Nothing */
 
 .words {
-    color: #1d1d7e70;
+    color: #5861b150;
     font-size: 0;
     line-height: 1.5;
     justify-content: center;

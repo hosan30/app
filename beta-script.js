@@ -1,7 +1,7 @@
 ///////////test script
 
 // view();
-alert(navigator.appName);
+alert(navigator.appNamel);
 
 // navigator.sayswho = (function() {
 //     var ua = navigator.userAgent;

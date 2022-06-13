@@ -1,6 +1,7 @@
 ///////////test script
 
 view();
+alert('Your browser version is reported as ' + navigator.appName);
 
 // function savedata(data) {
 //     fetch('https://jsonplaceholder.typicode.com/posts', {

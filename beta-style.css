@@ -6,7 +6,7 @@ body {
     font-size: 15px !important;
     background: url(bg-texture.png);
     /* background-color: #f4d03f !important; */
-    background-color: #1f1f3f !important;
+    background-color: #1f1f3f;
 }
 
 .news {

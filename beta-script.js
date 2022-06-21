@@ -1,7 +1,7 @@
 // update();
 view();
 // count();
-// update();
+update();
 
 
 
@@ -41,7 +41,7 @@ function update() {
 function view() {
     if (localStorage.getItem('bh') != null) {
         document.getElementById('bhppp').innerHTML = localStorage.getItem('bh');
-        document.getElementById('nbhppp').value = localStorage.getItem('bh');
+        document.getElementById('nbhppp').value = localStorage.getItem('bh') ;
 
     }
     if (localStorage.getItem('leaf') != null) {

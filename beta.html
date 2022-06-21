@@ -21,7 +21,7 @@
     <div class="container1" onclick="cross()" id="">
         <div class="form-control2">
             <div class="">
-                <label>B & H (<span id="bhppp" class="bhppp">283</span>)</label>
+                <label>B & H (<span id="bhppp" class="bhppp"></span>)</label>
             </div>
             <div>
                 <div class="test" id="success1">
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="form-control2">
-            <label>Royal(<span id="rlppp">85 </span>)</label>
+            <label>Royal(<span id="rlppp"></span>)</label>
             <div class="test" id="success4">
                 <button type="button " id="add4 " onclick="plus4()">
             <i class="icon-plus"></i>
@@ -74,9 +74,23 @@
           </button>
             </div>
         </div>
+        <div class="form-control2">
+            <div>
+                <label>Star (<span id="stppp"> </span>)</label>
+            </div>
+            <div class="test" id="success9">
+                <button type="button " id="add2" onclick="plus9()">
+            <i class="icon-plus"></i>
+          </button>
+                <input type="text " name=" " class=" " disabled="true" id="stQuantity" value="0 " />
+                <button type="button " id=" " onclick="minus9()">
+            <i class="icon-minus"></i>
+          </button>
+            </div>
+        </div>
 
-        <div class="form-control2 fullwidth">
-            <label>Lucky Strike (<span id="lsppp">170 </span>)</label>
+        <div class="form-control2 ">
+            <label>Lucky Strike (<span id="lsppp"> </span>)</label>
             <div class="test" id="success5">
                 <button type="button " onclick="plus6()">
             <i class="icon-plus"></i>
@@ -155,13 +169,15 @@
             <p>Update Price</p>
             <br />
             <p>B&H</p>
-            <input type="text " name="" class="ce" id="nbhppp" value="283" /><br />
+            <input type="text " name="" class="ce" id="nbhppp" value="284" /><br />
             <p>Leaf</p>
-            <input type="text " name="" class="ce" id="nleafppp" value="222" /><br />
+            <input type="text " name="" class="ce" id="nleafppp" value="224" /><br />
             <p>Hollywood</p>
             <input type="text " name="" class="ce" id="nhlppp" value="82" /><br />
             <p>Royal</p>
             <input type="text " name="" class="ce" id="nrlppp" value="85" /><br />
+            <p>Star</p>
+            <input type="text " name="" class="ce" id="nstppp" value="130" /><br />
             <p>Lucky Strike</p>
             <input type="text " name="" class="ce" id="nlsppp" value="170" /><br />
             <button onclick="update()" id="updatebtn">Update</button>

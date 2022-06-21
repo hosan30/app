@@ -1,110 +1,7 @@
-///////////test script
-
-// view();
-alert(navigator.appName);
-
-// navigator.sayswho = (function() {
-//     var ua = navigator.userAgent;
-//     var tem;
-//     var M =
-//         ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
-//     if (/trident/i.test(M[1])) {
-//         tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
-//         return 'IE ' + (tem[1] || '');
-//     }
-//     if (M[1] === 'Chrome') {
-//         tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
-//         if (tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
-//     }
-//     M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
-//     if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
-//     return M.join(' ');
-// })();
-
-// alert(navigator.sayswho);
-// function get_browser() {
-//     var ua = navigator.userAgent,
-//         tem,
-//         M =
-//         ua.match(
-//             /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
-//         ) || [];
-//     if (/trident/i.test(M[1])) {
-//         tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
-//         return { name: 'IE', version: tem[1] || '' };
-//     }
-//     if (M[1] === 'Chrome') {
-//         tem = ua.match(/\bOPR|Edge\/(\d+)/);
-//         if (tem != null) {
-//             return { name: 'Opera', version: tem[1] };
-//         }
-//     }
-//     M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
-//     if ((tem = ua.match(/version\/(\d+)/i)) != null) {
-//         M.splice(1, 1, tem[1]);
-//     }
-//     return {
-//         name: M[0],
-//         version: M[1],
-//     };
-// }
-
-// var browser = get_browser(); // browser.name = 'Chrome'
-// // browser.version = '40'
-
-// console.log(browser);
-
-// navigator.browserSpecs = (function() {
-//     var ua = navigator.userAgent,
-//         tem,
-//         M =
-//         ua.match(
-//             /(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i
-//         ) || [];
-//     if (/trident/i.test(M[1])) {
-//         tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
-//         return { name: 'IE', version: tem[1] || '' };
-//     }
-//     if (M[1] === 'Chrome') {
-//         tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
-//         if (tem != null)
-//             return { name: tem[1].replace('OPR', 'Opera'), version: tem[2] };
-//     }
-//     M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
-//     if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
-//     return { name: M[0], version: M[1] };
-// })();
-
-// console.log(navigator.browserSpecs); //Object { name: "Firefox", version: "42" }
-
-// if (navigator.browserSpecs.name == 'Firefox') {
-//     // Do something for Firefox.
-//     if (navigator.browserSpecs.version > 42) {
-//         // Do something for Firefox versions greater than 42.
-//     }
-// } else {
-//     // Do something for all other browsers.
-// }
-
-// function savedata(data) {
-//     fetch('https://jsonplaceholder.typicode.com/posts', {
-//             method: 'POST',
-//             body: JSON.stringify(data),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//             },
-//         })
-//         .then((response) => response.json())
-//         .then((json) => console.log(data));
-// }
-// var newData = ' ' + document.getElementById('nbhppp').value;
-// if (localStorage.getItem('bh') == null) {
-//     localStorage.setItem('bh', '[]');
-// }
-// var oldData = JSON.parse(localStorage.getItem('bh'));
-// oldData.push(newData);
-// localStorage.setItem('bh', JSON.stringify(oldData));
-
+// update();
+view();
+count();
+// update();
 function saveLocal(itemName, newPrice) {
     let bhValue = document.getElementById(newPrice).value;
     let nbhValue = parseFloat(bhValue);
@@ -117,6 +14,11 @@ function update() {
     cross();
     saveLocal('leaf', 'nleafppp');
     saveLocal('bh', 'nbhppp');
+    saveLocal('hl', 'nhlppp');
+    saveLocal('rl', 'nrlppp');
+    saveLocal('ls', 'nlsppp');
+    saveLocal('st', 'nstppp');
+
 
     view();
     count();
@@ -137,6 +39,18 @@ function view() {
     }
     if (localStorage.getItem('leaf') != null) {
         document.getElementById('leafppp').innerHTML = localStorage.getItem('leaf');
+    }
+    if (localStorage.getItem('hl') != null) {
+        document.getElementById('hlppp').innerHTML = localStorage.getItem('hl');
+    }
+    if (localStorage.getItem('rl') != null) {
+        document.getElementById('rlppp').innerHTML = localStorage.getItem('rl');
+    }
+    if (localStorage.getItem('ls') != null) {
+        document.getElementById('lsppp').innerHTML = localStorage.getItem('ls');
+    }
+    if (localStorage.getItem('st') != null) {
+        document.getElementById('stppp').innerHTML = localStorage.getItem('st');
     }
 }
 
@@ -159,6 +73,8 @@ function count() {
     const lsQuantity = parseFloat(bh5);
     const bh6 = document.getElementById('blankPrice').value;
     const blankQuantity = parseFloat(bh6);
+    const bh8 = document.getElementById('stQuantity').value;
+    const stQuantity = parseFloat(bh8);
 
     //update price
     const inputAmount = blankQuantity || 0;
@@ -184,6 +100,9 @@ function count() {
     let nlsppp = parseFloat(olsppp);
     let lsppp = nlsppp || 0;
 
+    let ostppp = document.getElementById('nstppp').value;
+    let nstppp = parseFloat(ostppp);
+    let stppp = nstppp || 0;
     //total
     const total =
         bhppp * bhQuantity +
@@ -191,6 +110,8 @@ function count() {
         hlppp * hlQuantity +
         rlppp * rlQuantity +
         lsppp * lsQuantity +
+        stppp * stQuantity +
+
         inputAmount * NbhAmount7;
 
     // let bhppp2 = bhppp;
@@ -206,6 +127,10 @@ function count() {
 
     let lsppp2 = lsppp;
     document.getElementById('lsppp').innerText = lsppp2 || 0;
+    
+    let stppp2 = stppp;
+    document.getElementById('stppp').innerText = stppp2 || 0;
+
 
     let total2 = 'Total' + ' ' + total;
 
@@ -218,7 +143,8 @@ function count() {
         bh4 > 0 ||
         bh5 > 0 ||
         bh6 > 0 ||
-        bh7 > 0
+        bh7 > 0 ||
+        bh8 > 0
     ) {
         document.getElementById('clear').setAttribute('style', 'display:block;');
     } else {
@@ -231,6 +157,8 @@ function count() {
     bgclr(bh4, 'success4');
     bgclr(bh5, 'success5');
     bgclr(bh7, 'success6');
+    bgclr(bh8, 'success9');
+
     flash();
 }
 /////////////////////////End of  Function
@@ -283,7 +211,16 @@ function plus8() {
 
 function minus8() {
     quntityupdate(false, 'blankQuantity');
-} ///////////////////////
+}
+
+function plus9() {
+    quntityupdate(true, 'stQuantity');
+}
+
+function minus9() {
+    quntityupdate(false, 'stQuantity');
+}  
+///////////////////////
 
 // Increase , Deacrease Function
 function quntityupdate(isPlus, input) {
@@ -314,6 +251,8 @@ function clear2() {
     let caseinput6 = document.getElementById('lsQuantity');
     let caseinput7 = document.getElementById('blankPrice');
     let caseinput8 = document.getElementById('blankQuantity');
+    let caseinput9 = document.getElementById('stQuantity');
+
 
     let newcount = caseinput.value;
 
@@ -326,6 +265,8 @@ function clear2() {
         caseinput6.value =
         caseinput7.value =
         caseinput8.value =
+        caseinput9.value =
+
         newcount;
 
     count();

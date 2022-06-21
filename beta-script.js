@@ -1,7 +1,12 @@
 // update();
 view();
-count();
+// count();
 // update();
+
+
+
+
+
 function saveLocal(itemName, newPrice) {
     let bhValue = document.getElementById(newPrice).value;
     let nbhValue = parseFloat(bhValue);
@@ -36,21 +41,33 @@ function update() {
 function view() {
     if (localStorage.getItem('bh') != null) {
         document.getElementById('bhppp').innerHTML = localStorage.getItem('bh');
+        document.getElementById('nbhppp').value = localStorage.getItem('bh');
+
     }
     if (localStorage.getItem('leaf') != null) {
         document.getElementById('leafppp').innerHTML = localStorage.getItem('leaf');
+        document.getElementById('nleafppp').value = localStorage.getItem('leaf');
+
     }
     if (localStorage.getItem('hl') != null) {
         document.getElementById('hlppp').innerHTML = localStorage.getItem('hl');
+        document.getElementById('nhlppp').value = localStorage.getItem('hl');
+
     }
     if (localStorage.getItem('rl') != null) {
         document.getElementById('rlppp').innerHTML = localStorage.getItem('rl');
+        document.getElementById('nrlppp').value = localStorage.getItem('rl');
+
     }
     if (localStorage.getItem('ls') != null) {
         document.getElementById('lsppp').innerHTML = localStorage.getItem('ls');
+        document.getElementById('nlsppp').value = localStorage.getItem('ls');
+
     }
     if (localStorage.getItem('st') != null) {
         document.getElementById('stppp').innerHTML = localStorage.getItem('st');
+        document.getElementById('nstppp').value = localStorage.getItem('st');
+
     }
 }
 

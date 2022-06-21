@@ -368,7 +368,7 @@ function edit() {
 
 function setting() {
     alert('COMING SOON');
-    location.href = 'index.html';
+    body.style
 }
 
 /////////////////////////

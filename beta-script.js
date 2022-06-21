@@ -1,7 +1,7 @@
 // update();
 view();
 // count();
-update();
+// update();
 
 
 

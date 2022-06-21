@@ -367,8 +367,8 @@ function edit() {
 }
 
 function setting() {
-    alert('COMING SOON');
-    body.style
+    document.body.style.backgroundColor = "#f4d03f !important";
+
 }
 
 /////////////////////////
